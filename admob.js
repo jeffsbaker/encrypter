@@ -18,12 +18,15 @@ if( /(android)/i.test(navigator.userAgent) ) {
 
 function initApp() {
     if (AdMob) {
+    	document.getElementById('footer').innerHTML = "Admob";
         AdMob.createBanner({
             adId : admobid.banner,
             position : AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow : true
         });
     }
+    else
+    	document.getElementById('footer').innerHTML = "None";	
 }
 
 document.addEventListener('deviceready', initApp, false);
