@@ -17,7 +17,7 @@ html
 body 
 { 
 	font-family: arial, helvetica, sans-serif; 
-	font-size:1em;
+	font-size: 20px;
 	height: 90%;
 	
 }
@@ -33,8 +33,8 @@ body
 textarea
 {
 	margin-top: 2em;
-	font-family:courier new, courier;
-	font-size:16px;
+	font-family: monospace;
+	font-size: 16px; /* px goes by height of font not width */
 	overflow-y: scroll; 
 	height: 90%;
 	padding: 3px;

@@ -33,7 +33,7 @@ password, secure, encoding, encoder, decoder, encoders, security">
 		<div id="menu_button" class="menu_button" onclick="menu_click(this, 'menu')" data-bit="0">Menu&#9660;</div>
 	</div>
 		<div id="menu" class="menu">
-		<a onclicl="return false;">Key:
+		<a onclick="return false;">Key:
 		<input type="password" name="key" id="key" maxlength="50" onkeypress="key_pushed(event);">
 		<a onclick="menu_click('menu_button', 'menu'); encrypter();">Encrypt</a>
 		<a onclick="menu_click('menu_button', 'menu'); decrypter();">Decrypt</a>
@@ -46,9 +46,9 @@ password, secure, encoding, encoder, decoder, encoders, security">
 <!--<div class="margin"></div>-->
 
 <div class="content" id="content">
-	<textarea name="textbox" style="width: 502px;" cols="51" rows="20"
-	onpaste="widen_textbox()" placeholder="Type or Paste Text Here"
-	onclick="menu_click('menu_button', 'menu', 1); close_all();"></textarea>
+	<textarea name="textbox" cols="45" rows="20"
+	 placeholder="Type or Paste Text Here"
+	onclick="menu_click('menu_button', 'menu', 1); close_all();">123456789 123456789 123456789 123456789 123456789 123456789</textarea>
 	<!-- Jeff note: Must use width: 502px because Chrome is 2px wider than IE and FF -->
 </div> <!-- close content -->
 
@@ -72,7 +72,7 @@ upon and press the "Decrypt" button in the menu.
 <p><center><b>Done</b></center></p>
 </div>
 
-<div class="footer"> </div>
+<div class="footer" id="footer"> </div>
 
 </form>
 </body>

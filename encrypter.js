@@ -18,11 +18,11 @@ function wordWrap(textbox)
 	var space = 0;  // takes on the position of spaces
 	var begin = 0;  // takes on position of beginning of lines
 	var linelength = 0;  // takes on the length of each line
-	var textwidth = document.fm.textbox.cols;  // width of textbox in COLS (33)
+	var textwidth = document.fm.textbox.cols + 1;  // width of textbox in COLS (33)
 	//var textwidth = Math.floor(document.fm.textbox.clientWidth / 16);
 	//console.log(textwidth);
-	document.fm.textbox.style.width = parseInt(document.fm.textbox.style.width) + 50 + "px";
-	//document.fm.textbox.cols += 2;
+	//document.fm.textbox.style.width = parseInt(document.fm.textbox.style.width) + 50 + "px";
+	document.fm.textbox.cols += 2;
 
 	var textlength = textbox.length;
 	var letter;
@@ -70,8 +70,8 @@ function wordWrap(textbox)
 function removeWrap(textbox)
 {
 	var delwrap = textbox;
-	document.fm.textbox.style.width = parseInt(document.fm.textbox.style.width) - 50 + "px";
-	//document.fm.textbox.cols -= 2;
+	//document.fm.textbox.style.width = parseInt(document.fm.textbox.style.width) - 50 + "px";
+	document.fm.textbox.cols -= 2;
 	// for IE
 	var regExp = new RegExp(String.fromCharCode(wordWrapChar) + 
 		String.fromCharCode(13) + String.fromCharCode(10),"gi");
