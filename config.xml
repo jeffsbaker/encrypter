@@ -6,7 +6,9 @@
         version     = "0.1" >
 
     <!-- versionCode is optional and Android only -->
-    <preference name="permissions" value="none"/>
+    
+    <icon src="res/icon.png" />
+    <preference name="permissions" value="none" />
 
     <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
     <name>Cool Encrypter</name>
