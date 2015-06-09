@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+<head>
+<title>Cool Encrypter</title>
+<meta charset="UTF-8">
+<meta name="Author" content="Jeff Baker">
+<meta name="Description" content="Cool Encrypter/Decrypter is 
+used to send free encrypted text messages to your friends.  
+It encrypts the message right before your eyes with a cool 
+display like in spy movies.">
+<meta name="KeyWords" content="encrypter, decrypter, cool, free, text,
+encrypt, decrypt, encode, decode, code, cipher, cypher,
+encipher, decipher, crack, spy, movie, movies, key, unlock, lock,
+encyption, decryption, cryptography, encryptor, decryptor,
+password, secure, encoding, encoder, decoder, encoders, security">
+<meta http-equiv="Reply-To" content="coach12@aol.com">
+<link rel="STYLESHEET" type="text/css" href="styles.css">
+<meta property="og:image" content="http://www.seabreezecomputers.com/stuff/logo-lock3.gif">
+<meta name="viewport" content="width=520, user-scalable=no, maximum-scale=.65" /> <!-- Jeff note: If I put ", initial-scale:1.0" then the iphone zooms in!!?? -->
+
+</head>
+
+<body>
+
+<script type="text/javascript" language="JavaScript" src="encrypter.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<form name="fm" id="fm" onsubmit="return false;">
+<div class="header" id="header">
+	<div class="logo">
+			<div class="text">Cool Encrypter</div>
+		<div id="menu_button" class="menu_button" onclick="menu_click(this, 'menu')" data-bit="0">Menu&#9660;</div>
+	</div>
+		<div id="menu" class="menu">
+		<a onclicl="return false;">Key:
+		<input type="password" name="key" id="key" maxlength="50" onkeypress="key_pushed(event);">
+		<a onclick="menu_click('menu_button', 'menu'); encrypter();">Encrypt</a>
+		<a onclick="menu_click('menu_button', 'menu'); decrypter();">Decrypt</a>
+		<a onclick="return false">About</a>
+		<a onclick="popup_box('help_box');">Help</a>	
+	</div> <!-- Close menu -->
+	<div id="test"> </div>
+</div> <!-- Close header -->
+
+<!--<div class="margin"></div>-->
+
+<div class="content" id="content">
+	<textarea name="textbox" style="width: 502px;" cols="51" rows="20"
+	onpaste="widen_textbox()" placeholder="Type or Paste Text Here"
+	onclick="menu_click('menu_button', 'menu', 1); close_all();"></textarea>
+	<!-- Jeff note: Must use width: 502px because Chrome is 2px wider than IE and FF -->
+</div> <!-- close content -->
+
+
+<div id="help_box" class="box">
+<a class="boxclose" onclick="close_all()"></a>
+<p><center><b>Help</b></center>
+<p>Cool Encrypter encrypts text in a cool way right before eyes like
+in spy movies. 
+<p><b>Encrypt:</b> To encrypt text, type or paste the text in the textarea
+and then enter the encryption <b>key</b> that you and your friend agreed
+upon and press the "Encrypt" button in the menu.
+<p><b>Decrypt:</b> To decrypt a message, paste the encrypted message in the textarea
+and then enter the encryption <b>key</b> that you and your friend agreed
+upon and press the "Decrypt" button in the menu.
+</div>
+
+<div id="done_box" class="box">
+<a class="boxclose" onclick="close_all()"></a>
+<br><br>
+<p><center><b>Done</b></center></p>
+</div>
+
+<div class="footer"> </div>
+
+</form>
+</body>
+</html>
