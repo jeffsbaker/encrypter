@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.seabreezecomputers.encrypter"
+        versionCode = "0.1" 
+        version     = "0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Cool Encrypter</name>
+
+    <description>
+        Cool Encrypter encrypts and decrypts text right before your eyes like in spy movies. 
+        Use a secret key that you and a friend agreed upon to encrypt the text.
+    </description>
+
+    <author href="http://seabreezecomputers.com/about/" email="jeff@seabreezecomputers.com">
+        Jeff Baker 
+    </author>
+
+</widget>
