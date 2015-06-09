@@ -4,6 +4,7 @@ fmtextbox = new String;
 var timer = 50;
 var wordWrapChar = 182; // paragraph mark ¶
 //var wordWrapChar = 27; // esc char
+var default_cols = document.fm.textbox.cols;
 
 function wordWrap(textbox)
 {
@@ -22,7 +23,7 @@ function wordWrap(textbox)
 	//var textwidth = Math.floor(document.fm.textbox.clientWidth / 16);
 	//console.log(textwidth);
 	//document.fm.textbox.style.width = parseInt(document.fm.textbox.style.width) + 50 + "px";
-	document.fm.textbox.cols += 2;
+	document.fm.textbox.cols = default_cols + 2;
 
 	var textlength = textbox.length;
 	var letter;
@@ -71,7 +72,7 @@ function removeWrap(textbox)
 {
 	var delwrap = textbox;
 	//document.fm.textbox.style.width = parseInt(document.fm.textbox.style.width) - 50 + "px";
-	document.fm.textbox.cols -= 2;
+	document.fm.textbox.cols = default_cols;
 	// for IE
 	var regExp = new RegExp(String.fromCharCode(wordWrapChar) + 
 		String.fromCharCode(13) + String.fromCharCode(10),"gi");
@@ -420,7 +421,6 @@ function widen_textbox()
 	{ 
 		var regExp = new RegExp(String.fromCharCode(wordWrapChar));
 		var textbox = document.fm.textbox.value;
-		var default_cols = document.fm.textbox.cols;
 		
 		if (textbox.match(regExp)) // if encrypted text pasted with paragraph sign
 		{
