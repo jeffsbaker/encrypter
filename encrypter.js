@@ -420,14 +420,17 @@ function widen_textbox()
 	{ 
 		var regExp = new RegExp(String.fromCharCode(wordWrapChar));
 		var textbox = document.fm.textbox.value;
+		var default_cols = document.fm.textbox.cols;
 		
 		if (textbox.match(regExp)) // if encrypted text pasted with paragraph sign
 		{
-			document.fm.textbox.style.width = 522 + "px";
+			//document.fm.textbox.style.width = 522 + "px";
+			document.fm.textbox.cols = default_cols + 2;
 		}
 		else // if unencrypted text is pasted
 		{
-			document.fm.textbox.style.width = 502 + "px";		
+			//document.fm.textbox.style.width = 502 + "px";	
+			document.fm.textbox.cols = default_cols;	
 		}
 	}, 25); 
 }
