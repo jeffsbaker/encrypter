@@ -1,32 +1,29 @@
 var admobid = {};
 if( /(android)/i.test(navigator.userAgent) ) { 
     admobid = { // for Android
-        banner: 'ca-app-pub-6869992474017983/9375997553',
-        interstitial: 'ca-app-pub-6869992474017983/1657046752'
+        banner: 'ca-app-pub-6159883332285612/9159597365',
+        interstitial: ''
     };
 } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
     admobid = { // for iOS
-        banner: 'ca-app-pub-6869992474017983/4806197152',
-        interstitial: 'ca-app-pub-6869992474017983/7563979554'
+        banner: 'ca-app-pub-6159883332285612/4589796965',
+        interstitial: ''
     };
 } else {
     admobid = { // for Windows Phone
-        banner: 'ca-app-pub-6869992474017983/8878394753',
-        interstitial: 'ca-app-pub-6869992474017983/1355127956'
+        banner: 'ca-app-pub-6159883332285612/9019996560',
+        interstitial: ''
     };
 }
 
 function initApp() {
     if (AdMob) {
-    	document.getElementById('footer').innerHTML = "Admob";
         AdMob.createBanner({
             adId : admobid.banner,
             position : AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow : true
         });
-    }
-    else
-    	document.getElementById('footer').innerHTML = "None";	
+    }	
 }
 
 document.addEventListener('deviceready', initApp, false);
