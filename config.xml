@@ -9,7 +9,7 @@
     
     <icon src="res/icon.png" /> <!-- Just one 144x144 icon for all devices -->
     <preference name="permissions" value="none" /> <!-- Stops Android for asking for permission for every single thing when user accepts the app install -->
-	<gap:plugin name="com.fridaydesigm.plugins.viewport_scale" /> <!-- Needed for viewport meta tag to work -->
+	<gap:plugin name="com.phonegap.plugin.viewport_scale" /> <!-- Needed for viewport meta tag to work -->
     <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" /> <!-- Needed to display an admob ad at bottom of page -->
     <name>Cool Encrypter</name>
 
