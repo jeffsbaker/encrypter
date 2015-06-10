@@ -1,3 +1,7 @@
+/* Put in config.xml:
+<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
+Does it also require cordova.js?? beceause it is not working for me!
+*/
 var admobid = {};
 if( /(android)/i.test(navigator.userAgent) ) { 
     admobid = { // for Android
@@ -17,13 +21,8 @@ if( /(android)/i.test(navigator.userAgent) ) {
 }
 
 function initApp() {
-    if (AdMob) {
-        AdMob.createBanner({
-            adId : admobid.banner,
-            position : AdMob.AD_POSITION.BOTTOM_CENTER,
-            autoShow : true
-        });
-    }	
+	admob.initAdmob(admobid.banner,admob.interstitial);
+	admob.showBanner(admob.BannerSize.BANNER,admob.Position.BOTTOM_CENTER); //show banner at the bottom of app 	
 }
 
 document.addEventListener('deviceready', initApp, false);
