@@ -45,6 +45,6 @@ document.addEventListener('deviceready', initApp, false);
 var viewportScale = screen.width / 520;
 footer.innerHTML += viewportScale + " " + screen.width;
 var viewport = document.querySelector("meta[name=viewport]");
-if (viewportScale > 1)
+if (viewportScale < 1)
 	viewport.setAttribute("content","user-scalable=no, initial-scale="+viewportScale);
 
