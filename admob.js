@@ -43,4 +43,5 @@ document.addEventListener('deviceready', initApp, false);
 
 var viewportScale = 1 / window.devicePixelRatio;
 footer.innerHTML += viewportScale;
-document.getElementById("viewport").setAttribute("content","width=520, user-scalable=no, initial-scale="+viewportScale+");
+var viewport = document.querySelector("meta[name=viewport]");
+viewport.setAttribute("content","width=520, user-scalable=no, initial-scale="+viewportScale);
