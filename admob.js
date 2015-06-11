@@ -46,5 +46,5 @@ var viewportScale = screen.width / 520;
 footer.innerHTML += viewportScale + " " + screen.width;
 var viewport = document.querySelector("meta[name=viewport]");
 if (viewportScale > 1)
-	viewport.setAttribute("content","width=520, target-densitydpi=device-dpi, user-scalable=no, initial-scale="+viewportScale);
+	viewport.setAttribute("content","user-scalable=no, initial-scale="+viewportScale);
 
