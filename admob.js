@@ -41,8 +41,10 @@ function initApp() {
 
 document.addEventListener('deviceready', initApp, false);
 
-/* var viewportScale = 1 / window.devicePixelRatio;
-footer.innerHTML += viewportScale;
+//var viewportScale = 1 / window.devicePixelRatio;
+var viewportScale = 520 / screen.width;
+footer.innerHTML += viewportScale + " " + screen.width;
 var viewport = document.querySelector("meta[name=viewport]");
-viewport.setAttribute("content","width=520, user-scalable=no, initial-scale="+viewportScale);
-*/
+if (viewportScale < 1)
+	viewport.setAttribute("content","width=520, target-densitydpi=device-dpi, user-scalable=no, initial-scale="+viewportScale);
+
