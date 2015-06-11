@@ -42,9 +42,9 @@ function initApp() {
 document.addEventListener('deviceready', initApp, false);
 
 //var viewportScale = 1 / window.devicePixelRatio;
-var viewportScale = 520 / screen.width;
+var viewportScale = screen.width / 520;
 footer.innerHTML += viewportScale + " " + screen.width;
 var viewport = document.querySelector("meta[name=viewport]");
-if (viewportScale < 1)
+if (viewportScale > 1)
 	viewport.setAttribute("content","width=520, target-densitydpi=device-dpi, user-scalable=no, initial-scale="+viewportScale);
 
