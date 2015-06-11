@@ -25,12 +25,18 @@ if( /(android)/i.test(navigator.userAgent) ) {
 }
 
 function initApp() {
-	if(typeof admob !== "undefined")
-		footer.innerHTML += "admob";
+	if(typeof AdMob !== "undefined")
+		footer.innerHTML += " AdMob";
 	else 
-		footer.innerHTML += "None";	
-	admob.initAdmob(admobid.banner,admob.interstitial);
-	admob.showBanner(admob.BannerSize.BANNER,admob.Position.BOTTOM_CENTER); //show banner at the bottom of app 	
+		footer.innerHTML += " None";	
+	 AdMob.createBanner( {
+        adId: admobid.banner, 
+        isTesting: false,
+        overlap: false, 
+        offsetTopBar: false, 
+        position: AdMob.AD_POSITION.BOTTOM_CENTER,
+        bgColor: 'black'
+    } );	
 }
 
 document.addEventListener('deviceready', initApp, false);
