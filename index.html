@@ -35,6 +35,7 @@ password, secure, encoding, encoder, decoder, encoders, security">
 	<div id="menu" class="menu">
 		<a onclick="return false;">Key:
 		<input type="password" name="key" id="key" maxlength="50" onkeypress="key_pushed(event);">
+		<a onclick="popup_box('pro_box');"><input type="checkbox" name="save_key_checkbox" onclick="popup_box('pro_box');"> Save Key</a>
 		<a onclick="return false;">VP: 
 		<input type="text" name="vp" id="vp" onkeypress="key_pushed(event);" onchange="change_viewport();">	
 		<a onclick="menu_click('menu_button', 'menu'); encrypter();">Encrypt</a>
@@ -86,8 +87,27 @@ upon and press the "Decrypt" button in the menu.
 <p>Based on <a href="#" onclick="window.open('http://www.seabreezecomputers.com/encrypter/', '_system');">
 http://www.seabreezecomputers.com/encrypter/</a>
 <p>Copyright 2015 by Jeff Baker
-
+<p><center><b>Download Cool Encrypter Pro</b></center>
+<p><b>Pro Features</b>
+<ul class="features">
+	<li>Save encryption key!</li>
+	<li>Encrypts/Decrypts twice as fast</li>
+	<li>No ads</li>
+</ul>
 </div>
+
+<div id="pro_box" class="box">
+<a class="boxclose" onclick="close_all()"></a>
+<br /><br />
+<p>To Unlock features such as save key:
+<p><center>Download Cool Encrypter Pro</center>
+<p><b>Pro Features</b>
+<ul class="features">
+	<li>Save encryption key!</li>
+	<li>Encrypts/Decrypts twice as fast</li>
+	<li>No ads</li>
+</ul>
+<div>
 
 <!--<div class="footer" id="footer"></div>-->
 <script type="text/javascript" src="admob.js"></script>

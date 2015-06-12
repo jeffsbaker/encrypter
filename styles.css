@@ -51,6 +51,22 @@ textarea
 {
 	font-size: 1em;
 }
+input[type="checkbox"]
+{
+	width: 1em;
+	height: 1em;
+	-webkit-appearance:none;
+	border: 2px solid black;
+	background-color: white;
+}
+input[type='checkbox']:checked
+{
+	background-color: blue;	
+	border: 3px groove;
+}
+.features li:before {
+  content: "\2605";
+}
 .header
 {
 	position: fixed;
