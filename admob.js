@@ -41,10 +41,10 @@ function initApp() {
 
 document.addEventListener('deviceready', initApp, false);
 
-//var viewportScale = 1 / window.devicePixelRatio;
-var viewportScale = screen.width / 520;
+var viewportScale = 1 / window.devicePixelRatio;
+//var viewportScale = screen.width / 520;
 footer.innerHTML += viewportScale + " " + screen.width;
 var viewport = document.querySelector("meta[name=viewport]");
-if (viewportScale < 1)
-	viewport.setAttribute("content","user-scalable=no, initial-scale="+viewportScale);
+//if (viewportScale < 1)
+//	viewport.setAttribute("content","user-scalable=no, initial-scale="+viewportScale+", minimum-scale=0.2, maximum-scale=2, width=device-width");
 
