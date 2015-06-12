@@ -1,7 +1,7 @@
 //Important note: Use -20 to work in Firefox and IE
 textbox = new String;
 fmtextbox = new String;
-var timer = 50;
+var timer = 100;
 var wordWrapChar = 182; // paragraph mark ¶
 //var wordWrapChar = 27; // esc char
 var default_cols = document.fm.textbox.cols;
