@@ -39,5 +39,11 @@ var viewportScale = screen.width / 520;
 if (document.getElementById('footer'))
 	footer.innerHTML += viewportScale + " " + screen.width;
 document.fm.vp.value = viewport.getAttribute("content");
-document.fm.vp.value = device.platform;
+
+function show_platform()
+{
+	document.fm.vp.value = device.platform; //Phonegap function: iOS, Android
+}
+
+document.addEventListener('deviceready', show_platform, false);
 

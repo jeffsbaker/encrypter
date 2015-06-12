@@ -12,7 +12,7 @@
 	
     <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" /> <!-- Needed to display an admob ad at bottom of page -->
     <gap:plugin name="org.apache.cordova.inappbrowser" /> <!-- Needed to open links in phone's browser using window.open(myURL, '_system'); -->
-    <gap:plugin name="Device" value="org.apache.cordova.core.Device"/> <!-- Needed to use device.platform command -->
+    <!-- Needed to use device.platform command -->
     <name>Cool Encrypter</name>
 
     <description>
