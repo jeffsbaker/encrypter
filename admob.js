@@ -2,7 +2,10 @@
 <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
 Does it also require cordova.js?? beceause it is not working for me!
 Now it is working.  Maybe it required cordova.js to be specified in index.html
-even though I don't need a copy of cordova.js because phonegap builds it itself
+even though I don't need a copy of cordova.js because phonegap builds it itself.
+
+New location after July 2015:
+<gap:plugin name="cordova-plugin-admob" source="npm"/>
 */
 if (document.getElementById('footer'))
 	var footer = document.getElementById('footer');

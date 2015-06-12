@@ -39,7 +39,7 @@ password, secure, encoding, encoder, decoder, encoders, security">
 		<input type="text" name="vp" id="vp" onkeypress="key_pushed(event);" onchange="change_viewport();">	
 		<a onclick="menu_click('menu_button', 'menu'); encrypter();">Encrypt</a>
 		<a onclick="menu_click('menu_button', 'menu'); decrypter();">Decrypt</a>
-		<a onclick="return false">About</a>
+		<a onclick="popup_box('about_box');">About</a>
 		<a onclick="popup_box('help_box');">Help</a>	
 	</div> <!-- Close menu -->
 	<div id="test"> </div>
@@ -78,7 +78,18 @@ upon and press the "Decrypt" button in the menu.
 <p><center><b>Done</b></center></p>
 </div>
 
-<div class="footer" id="footer"></div>
+<div id="about_box" class="box">
+<a class="boxclose" onclick="close_all()"></a>
+<p><center><b>About</b></center></p>
+<p>Cool Encrypter App</p>
+<p>Version 1.0</p>
+<p>Based on <a href="#" onclick="window.open('http://www.seabreezecomputers.com/encrypter/', '_system');">
+http://www.seabreezecomputers.com/encrypter/</a>
+<p>Copyright 2015 by Jeff Baker
+
+</div>
+
+<!--<div class="footer" id="footer"></div>-->
 <script type="text/javascript" src="admob.js"></script>
 </form>
 </body>
