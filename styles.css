@@ -211,6 +211,13 @@ a.boxclose{
 .boxclose:before {
     content: "Close";
 }
+.features li {
+	list-style: none;
+    padding: 0px;
+}
+.features li:before {
+  	content: "\2605";
+}
 .android_spacer
 {
 	/* Put below textarea so that android 
