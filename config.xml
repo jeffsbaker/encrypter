@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.seabreezecomputers.encrypter"
-        versionCode = "0.1" 
-        version     = "0.1" >
+        versionCode = "1.0" 
+        version     = "1.0" >
 
     <!-- versionCode is optional and Android only -->
     
@@ -15,8 +15,9 @@
     <name>Cool Encrypter</name>
 
     <description>
-        Cool Encrypter encrypts and decrypts text right before your eyes like in spy movies. 
-        Use a secret key that you and a friend agreed upon to encrypt the text.
+        Cool Encrypter/Decrypter is used to send free encrypted text messages to your friends.  
+		It encrypts the message right before your eyes with a cool display like in spy movies.
+		Hide your text messages and emails from your parents, siblings and other peeping eyes.
     </description>
 
     <author href="http://seabreezecomputers.com/about/" email="jeff@seabreezecomputers.com">

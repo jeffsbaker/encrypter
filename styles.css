@@ -18,27 +18,45 @@ body
 { 
 	font-family: arial, helvetica, sans-serif; 
 	font-size: 16px;
-	height: 90%;
-	
+	height: 100%; 
 }
 .content
 {
-	top: 0px;
-	position: fixed;
+	top: 0px; 
+	position: fixed; 
 	margin: 65px auto;
 	width: 100%;
-	height: 90%;
+	height: 90%; 
 	z-index: 0;
+	overflow-y: scroll;
+}
+.textbox_margin
+{
+	margin-top: 2em;
 }
 textarea
 {
-	margin-top: 2em;
+	margin-top: 1.5em;
 	font-family: monospace;
 	font-size: 16px; /* px goes by height of font not width */
 	overflow-y: scroll; 
 	height: 90%;
 	padding: 3px;
 }
+/*@media all and (orientation:landscape)
+{
+	textarea
+	{
+		zoom: 1.45;
+	}	
+}
+@media all and (orientation:portrait)
+{
+	textarea
+	{
+		zoom: 1;
+	}	
+} */
 :-moz-placeholder
 { 
 	font-size: 2em; 
@@ -63,9 +81,6 @@ input[type='checkbox']:checked
 {
 	background-color: blue;	
 	border: 3px groove;
-}
-.features li:before {
-  content: "\2605";
 }
 .header
 {
@@ -174,6 +189,7 @@ input[type='checkbox']:checked
 	vertical-align: middle; 
 	border-radius: 20px;
 	font-size: 1.5em;
+	word-break: break-all;
 }
 a.boxclose{
     float:right;
@@ -194,4 +210,13 @@ a.boxclose{
 
 .boxclose:before {
     content: "Close";
+}
+.android_spacer
+{
+	/* Put below textarea so that android 
+	keyboard does not block textarea */
+	width: 100%;
+	height: 10%;	
+	border: 1px solid black;
+	background-color: blue;
 }
