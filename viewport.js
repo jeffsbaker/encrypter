@@ -156,7 +156,7 @@ function show_viewport()
 
 		document.getElementById('footer').innerHTML += screen.width + "x" +  screen.height + 
 		" " + window.innerWidth + "x" + window.innerHeight +
-		" " + window.devicePixelRatio + " " + window.orientation + " ";
+		" " + window.devicePixelRatio + " " + window.orientation + " " + navigator.userAgent;
 		/*			screen.width	window.innerWidth	window.devicePixelRatio	Android Version
 			Kindle		1200			600					2
 			Nexus 4		480x800			320x240				1.5
