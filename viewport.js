@@ -25,9 +25,11 @@ function updateOrientation()
 		Old Android Device using stock Android Browser:
 			Old devices with stock browser do not read the width set in viewport. But we
 			can set a width if we add ", target-densitydpi=device-dpi" to the viewport tag.
-			However, things go strange when we rotate the device. To fix this problem
+			However, things go strange when we rotate the device. Also 
+			", target-densitydpi=device-dpi" on some high density devices makes the display 
+			font too small. To fix this problem
 			I found that I need to update the viewport on every rotation change depending
-			on the width of the device.
+			on the width of the device. 
 			
 			To get the standard point width on older Android devices we 
 			need to calculate it with screen.width / window.devicePixelRatio. However on
@@ -36,6 +38,11 @@ function updateOrientation()
 		New Android Devices with Chrome Browser:
 			New devices read the viewport width so we don't need to do anything if we detect
 			Chrome in the userAgent.
+		PhoneGap Build:
+			This function is useful for Phonegap build Android apps also because it appears
+			that seomtimes even if the Android device is newer and uses Chrome as the browser
+			engine, the app will still ignore the viewport width unless you use target-densitydpi.
+			if (window.cordova) will be true if it is a phonegap build app.
 		
 		iOS: screen.width is always the virtual width in points. (Points are 2 pixels)
 		For iPhone 5 (Retina display) 
@@ -44,8 +51,9 @@ function updateOrientation()
 		
 	*/
 	var point_width = 0;
-	//if (window.cordova) // Only run this command if it is running in a phonegap build app
-	if( /(android)/i.test(navigator.userAgent) )
+	var ua = navigator.userAgent;
+	var is_native_android = ((ua.indexOf('Mozilla/5.0') > -1 && ua.indexOf('Android ') > -1 && ua.indexOf('AppleWebKit') > -1) && (ua.indexOf('Version') > -1) && !(ua.indexOf('Chrome') > -1));
+	if (window.cordova || is_native_android) // Only run this command if it is running in a phonegap build app or Native Android browser
 	{
 		if (window.orientation == 90 || window.orientation == -90) // landscape
 			point_width = Math.max(screen.width, screen.height); // The greater will be the true width in landscape
@@ -181,10 +189,10 @@ function textbox_focus()
 //document.addEventListener('deviceready', show_viewport, false);
 //show_viewport();
 
-window.addEventListener("orientationchange", show_viewport, false); // Call when orientation changes
+window.addEventListener("orientationchange", updateOrientation, false); // Call when orientation changes
 window.addEventListener( "devicemotion", check_tilt, false ); // call when phone tilted
 //window.addEventListener("resize", updateOrientation); // Call when orientation changes
-show_viewport(); // Call on first run of app
+updateOrientation(); // Call on first run of app
 
 //document.fm.textbox.onclick=textbox_focus;
 //window.scrollTo(0,document.body.scrollHeight);
