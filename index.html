@@ -137,13 +137,14 @@ http://www.seabreezecomputers.com/encrypter/</a>
 		if (navigator.userAgent.match(/Kindle|Silk|KFTT|KFOT|KFJWA|KFJWI|KFSOWI|KFTHWA|KFTHWI|KFAPWA|KFAPWI/i)) // If a Kindle
 			app_link = "amzn://apps/android?p="+app_package;
 		else if (navigator.userAgent.match(/android/i)) // If an Android
-			app_link = "market://details?id="+app_package;  // Google Market (Google Play Store)
+			app_link = "https://play.google.com/store/apps/details?id="+app_package;  // Google Market (Google Play Store)
 		//else if (navigator.userAgent.match(/ipod|iphone|ipad/i)) // If an Apple Device
 		//	app_link = "";
 		else
 		{
 			app_link = "http://www.amazon.com/gp/mas/dl/android?p="+app_package; // Amazon App Store Web Link
 			//app_link = "https://play.google.com/store/apps/details?id="+app_package; // Google Play Web Link
+			//app_link = "market://details?id="+app_package;  // Google Market (Google Play Store)
 		}
 			
 		if (app_link != "")
@@ -155,7 +156,7 @@ http://www.seabreezecomputers.com/encrypter/</a>
 					elems[i].innerHTML = '<a href="'+app_link+'">Download<br /><u>'+app_title+'</u></a>';	
 				}
 				else if (elems[i].className.match(/\bgoogle_link\b/i))
-					elems[i].href ="market://details?id="+app_package;
+					elems[i].href ="https://play.google.com/store/apps/details?id="+app_package;
 				else if (elems[i].className.match(/\bamazon_link\b/i))
 					elems[i].href ="http://www.amazon.com/gp/mas/dl/android?p="+app_package;
 		}
