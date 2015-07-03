@@ -161,9 +161,15 @@ http://www.seabreezecomputers.com/encrypter/</a>
 			elems = document.getElementsByTagName('a');
 			for (var i=0; i < elems.length; i++)
 				if (elems[i].className.match(/\bgoogle_link\b/i))
-					elems[i].href ="market://details?id="+app_package;
+				{
+					elems[i].href = "https://play.google.com/store/apps/details?id="+app_package;
+					elems[i].onclick = function() { window.open('https://play.google.com/store/apps/details?id='+app_package, '_system'); return false; };
+				}
 				else if (elems[i].className.match(/\bamazon_link\b/i))
-					elems[i].href ="amzn://apps/android?p="+app_package;
+				{
+					elems[i].href = "http://www.amazon.com/gp/mas/dl/android?p="+app_package;
+					elems[i].onclick = function() { window.open('http://www.amazon.com/gp/mas/dl/android?p='+app_package, '_system'); return false; };					
+				}
 		}
 		
 	}	// end function change_links()
