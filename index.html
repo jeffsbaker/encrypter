@@ -50,8 +50,8 @@ using just the orientationchange event listener
 		<a onclick="popup_box('pro_box');"><input type="checkbox" name="save_key_checkbox" onclick="popup_box('pro_box');"> Save Key</a>
 		<a style="display:none;" onclick="return false;">VP: 
 		<input type="text" name="vp" id="vp" onkeypress="key_pushed(event);" onchange="change_viewport();">
-		<a onclick="menu_click('menu_button', 'menu'); close_all(); encrypter();">Encrypt</a>
-		<a onclick="menu_click('menu_button', 'menu'); close_all(); decrypter();">Decrypt</a>
+		<a onclick="menu_click('menu_button', 'menu'); close_all(); admob_interstitial(1);encrypter();">Encrypt</a>
+		<a onclick="menu_click('menu_button', 'menu'); close_all(); admob_interstitial(1);decrypter();">Decrypt</a>
 		<a onclick="popup_box('about_box');">About</a>
 		<a onclick="popup_box('help_box');">Help</a>	
 	</div> <!-- Close menu -->
@@ -86,7 +86,7 @@ upon and press the "Decrypt" button in the menu.
 </div>
 
 <div id="done_box" class="box">
-<a class="boxclose" onclick="close_all(); admob_interstitial();"></a>
+<a class="boxclose" onclick="close_all(); admob_interstitial(2);"></a>
 <br><br>
 <p><center><b>Done</b></center></p>
 </div>

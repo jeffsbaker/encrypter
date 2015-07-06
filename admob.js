@@ -56,11 +56,11 @@ function initApp() {
 
 document.addEventListener('deviceready', initApp, false);
 
-function admob_interstitial()
+function admob_interstitial(bit)
 {
 	// preppare and load ad resource in background, e.g. at begining of game level
-	if(typeof AdMob !== "undefined") AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
+	if(typeof AdMob !== "undefined" && bit == 1) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
 	
 	// show the interstitial later, e.g. at end of game level
-	if(typeof AdMob !== "undefined") AdMob.showInterstitial();
+	if(typeof AdMob !== "undefined" && bit == 2) AdMob.showInterstitial();
 }
